@@ -12,50 +12,50 @@ public class Main {
 
     static void getLeapYear(int year) {
         if (year %100 == 0 && year %400 == 0 )
-            System.out.println(year + " год является високосным");
+            System.out.println(year + " РіРѕРґ СЏРІР»СЏРµС‚СЃСЏ РІРёСЃРѕРєРѕСЃРЅС‹Рј");
         else if (year % 4 == 0 && year % 100 > 0)
-            System.out.println(year + " год является високосным");
+            System.out.println(year + " РіРѕРґ СЏРІР»СЏРµС‚СЃСЏ РІРёСЃРѕРєРѕСЃРЅС‹Рј");
         else if (year % 100 == 0)
-            System.out.println(year + " год не является високосным");
+            System.out.println(year + " РіРѕРґ РЅРµ СЏРІР»СЏРµС‚СЃСЏ РІРёСЃРѕРєРѕСЃРЅС‹Рј");
         else
-            System.out.println(year + " год не является високосным");
+            System.out.println(year + " РіРѕРґ РЅРµ СЏРІР»СЏРµС‚СЃСЏ РІРёСЃРѕРєРѕСЃРЅС‹Рј");
     }
 
     static void getOSAndYearToInstall(int clientOS, int clientDeviceYear) {
         if (clientDeviceYear == LocalDate.now().getYear()) {
             if (clientOS == 0) {
-                System.out.println("Установите версию приложения для iOS по ссылке");
+                System.out.println("РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РІРµСЂСЃРёСЋ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ iOS РїРѕ СЃСЃС‹Р»РєРµ");
             } else {
-                System.out.println("Установите версию приложения для Android по ссылке");
+                System.out.println("РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РІРµСЂСЃРёСЋ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ Android РїРѕ СЃСЃС‹Р»РєРµ");
             }
         } else if (clientDeviceYear < LocalDate.now().getYear()){
             if (clientOS == 0) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+                System.out.println("РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РѕР±Р»РµРіС‡РµРЅРЅСѓСЋ РІРµСЂСЃРёСЋ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ iOS РїРѕ СЃСЃС‹Р»РєРµ");
             } else {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+                System.out.println("РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РѕР±Р»РµРіС‡РµРЅРЅСѓСЋ РІРµСЂСЃРёСЋ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ Android РїРѕ СЃСЃС‹Р»РєРµ");
             }
-        } else System.out.println("Будущее еще не наступило");
+        } else System.out.println("Р‘СѓРґСѓС‰РµРµ РµС‰Рµ РЅРµ РЅР°СЃС‚СѓРїРёР»Рѕ");
     }
 
     static void getDistanceToDelivery(int deliveryDistance) {
         int deliveryTime = 1;
         if (deliveryDistance > 100)
-            System.out.println("Далековато");
+            System.out.println("Р”Р°Р»РµРєРѕРІР°С‚Рѕ");
         else if (deliveryDistance >= 60)
-            System.out.println("Потребуется дней: " + (deliveryTime + 2));
+            System.out.println("РџРѕС‚СЂРµР±СѓРµС‚СЃСЏ РґРЅРµР№: " + (deliveryTime + 2));
         else if (deliveryDistance >= 20)
-            System.out.println("Потребуется дней: " + (deliveryTime + 1));
+            System.out.println("РџРѕС‚СЂРµР±СѓРµС‚СЃСЏ РґРЅРµР№: " + (deliveryTime + 1));
         else if (deliveryDistance > 0)
-            System.out.println("Потребуется дней: " + deliveryTime);
+            System.out.println("РџРѕС‚СЂРµР±СѓРµС‚СЃСЏ РґРЅРµР№: " + deliveryTime);
         else
-            System.out.println("Некорректное значение");
+            System.out.println("РќРµРєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ");
     }
 
     public static void getDuplicate(String str) {
-        String duplicateMessage = "Дублей нет";
+        String duplicateMessage = "Р”СѓР±Р»РµР№ РЅРµС‚";
         for (int i = 0; i < str.length() - 1; i++) {
             if (str.charAt(i) == str.charAt(i + 1)) {
-                duplicateMessage = "Дубль: " + str.charAt(i);
+                duplicateMessage = "Р”СѓР±Р»СЊ: " + str.charAt(i);
                 break;
             }
         }
